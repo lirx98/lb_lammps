@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/dem_main.dir/main.cpp.o -o ../dem_main   -L/work/e283/e283/lirx/test/phase-field/lb_lammps/lammps_install/lib64  -Wl,-rpath,/work/e283/e283/lirx/test/phase-field/lb_lammps/lammps_install/lib64:/opt/cray/pe/mpich/8.1.23/ofi/cray/10.0/lib -llammps -ldl /opt/cray/pe/mpich/8.1.23/ofi/cray/10.0/lib/libmpi_cray.so 

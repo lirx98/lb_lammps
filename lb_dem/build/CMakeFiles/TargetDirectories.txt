@@ -1,0 +1,4 @@
+/work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build/CMakeFiles/rebuild_cache.dir
+/work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build/CMakeFiles/edit_cache.dir
+/work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build/CMakeFiles/copy_plugin.dir
+/work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build/CMakeFiles/dem_main.dir
