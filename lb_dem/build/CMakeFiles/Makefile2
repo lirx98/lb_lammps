@@ -63,70 +63,101 @@ CMAKE_BINARY_DIR = /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/copy_plugin.dir/all
-all: CMakeFiles/dem_main.dir/all
+all: plugins/lbforce/all
+all: src/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: plugins/lbforce/preinstall
+preinstall: src/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/copy_plugin.dir/clean
-clean: CMakeFiles/dem_main.dir/clean
+clean: plugins/lbforce/clean
+clean: src/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/copy_plugin.dir
+# Directory level rules for directory plugins/lbforce
 
-# All Build rule for target.
-CMakeFiles/copy_plugin.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/copy_plugin.dir/build.make CMakeFiles/copy_plugin.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/copy_plugin.dir/build.make CMakeFiles/copy_plugin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build/CMakeFiles --progress-num=1 "Built target copy_plugin"
-.PHONY : CMakeFiles/copy_plugin.dir/all
+# Recursive "all" directory target.
+plugins/lbforce/all: plugins/lbforce/CMakeFiles/lbforceplugin.dir/all
+.PHONY : plugins/lbforce/all
 
-# Build rule for subdir invocation for target.
-CMakeFiles/copy_plugin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build/CMakeFiles 1
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/copy_plugin.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build/CMakeFiles 0
-.PHONY : CMakeFiles/copy_plugin.dir/rule
+# Recursive "preinstall" directory target.
+plugins/lbforce/preinstall:
+.PHONY : plugins/lbforce/preinstall
 
-# Convenience name for target.
-copy_plugin: CMakeFiles/copy_plugin.dir/rule
-.PHONY : copy_plugin
-
-# clean rule for target.
-CMakeFiles/copy_plugin.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/copy_plugin.dir/build.make CMakeFiles/copy_plugin.dir/clean
-.PHONY : CMakeFiles/copy_plugin.dir/clean
+# Recursive "clean" directory target.
+plugins/lbforce/clean: plugins/lbforce/CMakeFiles/lbforceplugin.dir/clean
+.PHONY : plugins/lbforce/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/dem_main.dir
+# Directory level rules for directory src
+
+# Recursive "all" directory target.
+src/all: src/CMakeFiles/lb_dem_main.dir/all
+.PHONY : src/all
+
+# Recursive "preinstall" directory target.
+src/preinstall:
+.PHONY : src/preinstall
+
+# Recursive "clean" directory target.
+src/clean: src/CMakeFiles/lb_dem_main.dir/clean
+.PHONY : src/clean
+
+#=============================================================================
+# Target rules for target plugins/lbforce/CMakeFiles/lbforceplugin.dir
 
 # All Build rule for target.
-CMakeFiles/dem_main.dir/all: CMakeFiles/copy_plugin.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dem_main.dir/build.make CMakeFiles/dem_main.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dem_main.dir/build.make CMakeFiles/dem_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build/CMakeFiles --progress-num=2,3 "Built target dem_main"
-.PHONY : CMakeFiles/dem_main.dir/all
+plugins/lbforce/CMakeFiles/lbforceplugin.dir/all:
+	$(MAKE) $(MAKESILENT) -f plugins/lbforce/CMakeFiles/lbforceplugin.dir/build.make plugins/lbforce/CMakeFiles/lbforceplugin.dir/depend
+	$(MAKE) $(MAKESILENT) -f plugins/lbforce/CMakeFiles/lbforceplugin.dir/build.make plugins/lbforce/CMakeFiles/lbforceplugin.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build/CMakeFiles --progress-num=3,4 "Built target lbforceplugin"
+.PHONY : plugins/lbforce/CMakeFiles/lbforceplugin.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/dem_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/dem_main.dir/all
+plugins/lbforce/CMakeFiles/lbforceplugin.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 plugins/lbforce/CMakeFiles/lbforceplugin.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build/CMakeFiles 0
-.PHONY : CMakeFiles/dem_main.dir/rule
+.PHONY : plugins/lbforce/CMakeFiles/lbforceplugin.dir/rule
 
 # Convenience name for target.
-dem_main: CMakeFiles/dem_main.dir/rule
-.PHONY : dem_main
+lbforceplugin: plugins/lbforce/CMakeFiles/lbforceplugin.dir/rule
+.PHONY : lbforceplugin
 
 # clean rule for target.
-CMakeFiles/dem_main.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dem_main.dir/build.make CMakeFiles/dem_main.dir/clean
-.PHONY : CMakeFiles/dem_main.dir/clean
+plugins/lbforce/CMakeFiles/lbforceplugin.dir/clean:
+	$(MAKE) $(MAKESILENT) -f plugins/lbforce/CMakeFiles/lbforceplugin.dir/build.make plugins/lbforce/CMakeFiles/lbforceplugin.dir/clean
+.PHONY : plugins/lbforce/CMakeFiles/lbforceplugin.dir/clean
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/lb_dem_main.dir
+
+# All Build rule for target.
+src/CMakeFiles/lb_dem_main.dir/all: plugins/lbforce/CMakeFiles/lbforceplugin.dir/all
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/lb_dem_main.dir/build.make src/CMakeFiles/lb_dem_main.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/lb_dem_main.dir/build.make src/CMakeFiles/lb_dem_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build/CMakeFiles --progress-num=1,2 "Built target lb_dem_main"
+.PHONY : src/CMakeFiles/lb_dem_main.dir/all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/lb_dem_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/lb_dem_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build/CMakeFiles 0
+.PHONY : src/CMakeFiles/lb_dem_main.dir/rule
+
+# Convenience name for target.
+lb_dem_main: src/CMakeFiles/lb_dem_main.dir/rule
+.PHONY : lb_dem_main
+
+# clean rule for target.
+src/CMakeFiles/lb_dem_main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/lb_dem_main.dir/build.make src/CMakeFiles/lb_dem_main.dir/clean
+.PHONY : src/CMakeFiles/lb_dem_main.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

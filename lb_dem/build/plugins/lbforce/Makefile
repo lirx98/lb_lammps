@@ -132,14 +132,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build/CMakeFiles /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build && $(CMAKE_COMMAND) -E cmake_progress_start /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build/CMakeFiles /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build/plugins/lbforce//CMakeFiles/progress.marks
+	cd /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 plugins/lbforce/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 plugins/lbforce/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,44 +148,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 plugins/lbforce/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 plugins/lbforce/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named lbforceplugin
+# Convenience name for target.
+plugins/lbforce/CMakeFiles/lbforceplugin.dir/rule:
+	cd /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 plugins/lbforce/CMakeFiles/lbforceplugin.dir/rule
+.PHONY : plugins/lbforce/CMakeFiles/lbforceplugin.dir/rule
 
-# Build rule for target.
-lbforceplugin: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lbforceplugin
+# Convenience name for target.
+lbforceplugin: plugins/lbforce/CMakeFiles/lbforceplugin.dir/rule
 .PHONY : lbforceplugin
 
 # fast build rule for target.
 lbforceplugin/fast:
-	$(MAKE) $(MAKESILENT) -f plugins/lbforce/CMakeFiles/lbforceplugin.dir/build.make plugins/lbforce/CMakeFiles/lbforceplugin.dir/build
+	cd /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build && $(MAKE) $(MAKESILENT) -f plugins/lbforce/CMakeFiles/lbforceplugin.dir/build.make plugins/lbforce/CMakeFiles/lbforceplugin.dir/build
 .PHONY : lbforceplugin/fast
 
-#=============================================================================
-# Target rules for targets named lb_dem_main
+fix_lb_force.o: fix_lb_force.cpp.o
+.PHONY : fix_lb_force.o
 
-# Build rule for target.
-lb_dem_main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lb_dem_main
-.PHONY : lb_dem_main
+# target to build an object file
+fix_lb_force.cpp.o:
+	cd /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build && $(MAKE) $(MAKESILENT) -f plugins/lbforce/CMakeFiles/lbforceplugin.dir/build.make plugins/lbforce/CMakeFiles/lbforceplugin.dir/fix_lb_force.cpp.o
+.PHONY : fix_lb_force.cpp.o
 
-# fast build rule for target.
-lb_dem_main/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/lb_dem_main.dir/build.make src/CMakeFiles/lb_dem_main.dir/build
-.PHONY : lb_dem_main/fast
+fix_lb_force.i: fix_lb_force.cpp.i
+.PHONY : fix_lb_force.i
+
+# target to preprocess a source file
+fix_lb_force.cpp.i:
+	cd /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build && $(MAKE) $(MAKESILENT) -f plugins/lbforce/CMakeFiles/lbforceplugin.dir/build.make plugins/lbforce/CMakeFiles/lbforceplugin.dir/fix_lb_force.cpp.i
+.PHONY : fix_lb_force.cpp.i
+
+fix_lb_force.s: fix_lb_force.cpp.s
+.PHONY : fix_lb_force.s
+
+# target to generate assembly for a file
+fix_lb_force.cpp.s:
+	cd /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build && $(MAKE) $(MAKESILENT) -f plugins/lbforce/CMakeFiles/lbforceplugin.dir/build.make plugins/lbforce/CMakeFiles/lbforceplugin.dir/fix_lb_force.cpp.s
+.PHONY : fix_lb_force.cpp.s
 
 # Help Target
 help:
@@ -199,8 +211,10 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... lb_dem_main"
 	@echo "... lbforceplugin"
+	@echo "... fix_lb_force.o"
+	@echo "... fix_lb_force.i"
+	@echo "... fix_lb_force.s"
 .PHONY : help
 
 
@@ -212,6 +226,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
