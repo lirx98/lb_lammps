@@ -1,1 +1,0 @@
-/opt/cray/pe/mpich/8.1.23/ofi/crayclang/10.0/bin/mpicxx -fPIC -rdynamic -shared  -o lbforceplugin.so CMakeFiles/lbforceplugin.dir/lbforceplugin.cpp.o CMakeFiles/lbforceplugin.dir/fix_lb_force.cpp.o  -Wl,-rpath,/home/e283/e283/lirx/lammps_install/lib64 /home/e283/e283/lirx/lammps_install/lib64/liblammps.so 
