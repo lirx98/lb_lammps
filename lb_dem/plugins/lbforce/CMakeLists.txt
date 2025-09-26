@@ -82,15 +82,15 @@ target_link_libraries(lbforceplugin
     ${LAMMPS_LIBRARY}
 )
 
-# 插件编译选项 - 隐藏内部符号，避免与主程序冲突
-set_target_properties(lbforceplugin PROPERTIES
-  CXX_VISIBILITY_PRESET hidden
-  VISIBILITY_INLINES_HIDDEN ON
-  PREFIX ""  # 生成的库名为lbforceplugin.so而不是liblbforceplugin.so
-)
+# # 插件编译选项 - 隐藏内部符号，避免与主程序冲突
+# set_target_properties(lbforceplugin PROPERTIES
+#   CXX_VISIBILITY_PRESET hidden
+#   VISIBILITY_INLINES_HIDDEN ON
+#   PREFIX ""  # 生成的库名为lbforceplugin.so而不是liblbforceplugin.so
+# )
 
 # 安装插件到系统库目录或LAMMPS插件目录
-set(LAMMPS_PLUGIN_DIR "${CMAKE_INSTALL_PREFIX}/lib/lammps/plugins" CACHE PATH "LAMMPS plugin installation directory")
+# set(LAMMPS_PLUGIN_DIR "${CMAKE_INSTALL_PREFIX}/lib/lammps/plugins" CACHE PATH "LAMMPS plugin installation directory")
 
 install(TARGETS lbforceplugin
   LIBRARY DESTINATION ${LAMMPS_PLUGIN_DIR}

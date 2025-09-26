@@ -203,9 +203,6 @@ LAMMPS_INCLUDE_DIR:PATH=/work/e283/e283/lirx/test/phase-field/lb_lammps/lammps_i
 //Path to a library.
 LAMMPS_LIBRARY:FILEPATH=/work/e283/e283/lirx/test/phase-field/lb_lammps/lammps_install/lib64/liblammps.so
 
-//LAMMPS plugin installation directory
-LAMMPS_PLUGIN_DIR:PATH=/usr/local/lib/lammps/plugins
-
 //Executable for running MPI programs.
 MPIEXEC_EXECUTABLE:FILEPATH=/usr/bin/srun
 

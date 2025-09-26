@@ -43,29 +43,11 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}/usr/local/lib/lammps/plugins/lbforceplugin.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/lib/lammps/plugins/lbforceplugin.so")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}/usr/local/lib/lammps/plugins/lbforceplugin.so"
-         RPATH "")
-  endif()
-  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/usr/local/lib/lammps/plugins/lbforceplugin.so")
-  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-file(INSTALL DESTINATION "/usr/local/lib/lammps/plugins" TYPE SHARED_LIBRARY FILES "/work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/build/plugins/lbforce/lbforceplugin.so")
-  if(EXISTS "$ENV{DESTDIR}/usr/local/lib/lammps/plugins/lbforceplugin.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/lib/lammps/plugins/lbforceplugin.so")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/usr/local/lib/lammps/plugins/lbforceplugin.so"
-         OLD_RPATH "/work/e283/e283/lirx/test/phase-field/lb_lammps/lammps_install/lib64:/opt/cray/pe/mpich/8.1.23/ofi/cray/10.0/lib:"
-         NEW_RPATH "")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/work/e283/e283/lirx/test/phase-field/lb_lammps/lb_dem/bin/liblbforceplugin.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liblbforceplugin.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liblbforceplugin.so")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/lib/lammps/plugins/lbforceplugin.so")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liblbforceplugin.so")
     endif()
   endif()
 endif()
@@ -78,6 +60,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(MAKE_DIRECTORY /usr/local/lib/lammps/plugins)
+  file(MAKE_DIRECTORY )
 endif()
 

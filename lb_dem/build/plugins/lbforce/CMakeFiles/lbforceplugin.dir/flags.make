@@ -6,5 +6,5 @@ CXX_DEFINES = -Dlbforceplugin_EXPORTS
 
 CXX_INCLUDES = -I/work/e283/e283/lirx/test/phase-field/lb_lammps/lammps/src -I/work/e283/e283/lirx/test/phase-field/lb_lammps/lammps_install/include/lammps -I/opt/cray/pe/mpich/8.1.23/ofi/cray/10.0/include
 
-CXX_FLAGS = -O3 -DNDEBUG -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -std=c++1z
+CXX_FLAGS = -O3 -DNDEBUG -fPIC -std=c++1z
 
